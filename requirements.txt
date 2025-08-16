@@ -1,0 +1,8 @@
+# 동아리 회계 관리 시스템 의존성
+# Python 3.12 호환 버전
+
+streamlit>=1.28.0
+pymysql>=1.1.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+numpy>=1.24.0
