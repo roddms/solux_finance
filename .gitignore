@@ -59,7 +59,18 @@ logs/
 
 # Streamlit
 .streamlit/secrets.toml
+.streamlit/secrets_team.toml
+
+# MySQL Configuration
+my.cnf
+*.cnf
 
 # Temporary files
 *.tmp
 *.temp
+
+# Sensitive information
+*password*
+*secret*
+*key*
+*credential*
