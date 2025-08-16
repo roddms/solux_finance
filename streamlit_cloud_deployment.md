@@ -208,11 +208,11 @@ pool = PooledDB(
     maxusage=None,
     setsession=[],
     ping=0,
-    host=st.secrets["mysql"]["db_host"],
-    port=st.secrets["mysql"]["db_port"],
-    user=st.secrets["mysql"]["db_user"],
-    password=st.secrets["mysql"]["db_password"],
-    database=st.secrets["mysql"]["db_name"],
+                host=st.secrets["db"]["host"],
+            port=int(st.secrets["db"]["port"]),
+            user=st.secrets["db"]["user"],
+            password=st.secrets["db"]["password"],
+            database=st.secrets["db"]["database"],
     charset='utf8mb4'
 )
 

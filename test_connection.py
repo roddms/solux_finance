@@ -24,11 +24,11 @@ def test_mysql_connection():
             secrets = toml.load(f)
         
         db_config = {
-            'host': secrets['mysql']['db_host'],
-            'port': secrets['mysql']['db_port'],
-            'user': secrets['mysql']['db_user'],
-            'password': secrets['mysql']['db_password'],
-            'database': secrets['mysql']['db_name'],
+            'host': secrets['db']['host'],
+            'port': int(secrets['db']['port']),
+            'user': secrets['db']['user'],
+            'password': secrets['db']['password'],
+            'database': secrets['db']['database'],
             'charset': 'utf8mb4'
         }
     except Exception as e:

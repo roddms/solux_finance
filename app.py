@@ -23,12 +23,13 @@ st.set_page_config(
 def get_connection():
     """데이터베이스 연결 함수"""
     try:
+        # Streamlit Cloud secrets에서 데이터베이스 정보 읽기
         connection = pymysql.connect(
-            host=st.secrets["mysql"]["db_host"],
-            port=st.secrets["mysql"]["db_port"],
-            user=st.secrets["mysql"]["db_user"],
-            password=st.secrets["mysql"]["db_password"],
-            database=st.secrets["mysql"]["db_name"],
+            host=st.secrets["db"]["host"],
+            port=int(st.secrets["db"]["port"]),
+            user=st.secrets["db"]["user"],
+            password=st.secrets["db"]["password"],
+            database=st.secrets["db"]["database"],
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor
         )
